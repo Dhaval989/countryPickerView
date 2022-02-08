@@ -9,7 +9,22 @@ import XCTest
 @testable import countryPickerView
 
 class countryPickerViewTests: XCTestCase {
-
+        
+    
+    var countryCode : countryPickerAdd!
+    
+    override func setUp() {
+        countryCode = countryPickerAdd()
+    }
+    
+    func textAdd(){
+        XCTAssertEqual(countryCode.add(number1: 1, number2: 1), 2)
+    }
+    
+    func testsub(){
+        XCTAssertEqual(countryCode.sub(number1: 3, number2: 1), 2)
+    }
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -29,5 +44,4 @@ class countryPickerViewTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
 }
